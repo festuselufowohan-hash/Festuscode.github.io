@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festus Elufowohan Oluwadamilare | Performance Marketer & Media Buyer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            50: '#f0f4f9',
+                            100: '#dce5f2',
+                            800: '#1a274a',
+                            900: '#141e38', /* Exact Dark Blue from Logo */
+                            950: '#0d1326',
+                        },
+                        gold: {
+                            400: '#facc15',
+                            500: '#e5a812', /* Exact Golden Yellow from Logo */
+                            600: '#d99b26',
+                            700: '#b4770f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #0f172a !important;
+                font-size: 10pt;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-only { 
+                display: block !important;
+            }
+            .cv-page-container {
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+            }
+        }
+
+        .print-only {
+            display: none;
+        }
+
+        /* Clean executive shadows */
+        .exec-shadow {
+            box-shadow: 0 10px 30px -10px rgba(20, 30, 56, 0.08);
+        }
+
+        /* Custom scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8fafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-gold-500 selection:text-white min-h-screen flex flex-col">
+
+    <header class="no-print sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#hero" class="flex items-center gap-3.5 group">
+                <img src="1000162547.jpg.jpeg" 
+                     onerror="this.onerror=null; this.outerHTML='<div class=\'w-11 h-11 rounded-xl bg-navy-900 border border-gold-500/30 flex items-center justify-center text-gold-400 font-extrabold font-display text-lg shadow-md group-hover:scale-105 transition-transform\'>FE</div>';" 
+                     alt="Festus Elufowohan Logo" 
+                     class="w-11 h-11 rounded-xl shadow-md border border-navy-900/10 group-hover:scale-105 transition-transform object-cover" />
+                <div>
+                    <span class="font-display font-extrabold text-base tracking-tight text-navy-900 block group-hover:text-gold-600 transition-colors">
+                        FESTUS ELUFOWOHAN
+                    </span>
+                    <span class="text-[11px] font-bold text-slate-500 tracking-wider uppercase block">
+                        Media Buyer & Performance Strategist
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-7 text-xs font-bold tracking-wide text-slate-700">
+                <a href="#about" class="hover:text-navy-900 transition-colors">About</a>
+                <a href="#services" class="hover:text-navy-900 transition-colors">Services</a>
+                <a href="#skills" class="hover:text-navy-900 transition-colors">Skills & Stack</a>
+                <a href="#case-studies" class="hover:text-navy-900 transition-colors">Case Studies</a>
+                <a href="#cv-printable" class="text-gold-700 hover:text-gold-600 font-bold flex items-center gap-1.5">
+                    <i data-lucide="file-text" class="w-4 h-4"></i> CV View
+                </a>
+            </nav>
+
+            <!-- Navigation Actions -->
+            <div class="hidden sm:flex items-center gap-3">
+                <button onclick="toggleCVView()" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-navy-900 border border-slate-300 transition flex items-center gap-2">
+                    <i data-lucide="printer" class="w-4 h-4 text-navy-900"></i>
+                    <span>Export CV PDF</span>
+                </button>
+                <a href="https://wa.me/?text=Hi%20Festus,%20I%20reviewed%20your%20Digital%20Marketing%20Portfolio" target="_blank" class="px-5 py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-xs font-bold text-white shadow-lg transition flex items-center gap-2 border-b-2 border-gold-500">
+                    <i data-lucide="message-square" class="w-4 h-4 text-gold-400"></i>
+                    <span>Work With Me</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-100 border border-slate-200 text-slate-700">
+                <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4">
+            <nav class="flex flex-col gap-3 text-sm font-semibold text-slate-800">
+                <a href="#about" onclick="toggleMobileMenu()" class="py-1.5 hover:text-navy-900">About Me</a>
+                <a href="#services" onclick="toggleMobileMenu()" class="py-1.5 hover:text-navy-900">Services</a>
+                <a href="#skills" onclick="toggleMobileMenu()" class="py-1.5 hover:text-navy-900">Skills & Stack</a>
+                <a href="#case-studies" onclick="toggleMobileMenu()" class="py-1.5 hover:text-navy-900">Proof of Work & Case Studies</a>
+                <a href="#cv-printable" onclick="toggleMobileMenu()" class="py-1.5 text-gold-700 font-bold flex items-center gap-2">
+                    <i data-lucide="file-text" class="w-4 h-4"></i> Switch to Printable CV
+                </a>
+            </nav>
+            <div class="pt-4 border-t border-slate-200 flex flex-col gap-2">
+                <button onclick="toggleCVView()" class="w-full py-2.5 rounded-xl bg-slate-100 text-navy-900 text-xs font-bold flex items-center justify-center gap-2">
+                    <i data-lucide="printer" class="w-4 h-4 text-navy-900"></i> Export PDF CV
+                </button>
+                <a href="https://wa.me/?text=Hi%20Festus,%20I%20reviewed%20your%20Digital%20Marketing%20Portfolio" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 text-white text-xs font-bold flex items-center justify-center gap-2">
+                    <i data-lucide="message-square" class="w-4 h-4 text-gold-400"></i> Work With Me
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <section id="hero" class="no-print bg-white py-12 lg:py-20 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Hero Left Text Column (Executive Style) -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        
+                        <!-- Eyebrow Badge -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-navy-50 border border-navy-100 text-navy-900 text-xs font-bold tracking-wider uppercase">
+                            <span class="w-2 h-2 rounded-full bg-gold-500"></span>
+                            PERFORMANCE MARKETING • MEDIA BUYING • DIRECT RESPONSE
+                        </div>
+
+                        <!-- Main Headline -->
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-navy-900 tracking-tight leading-[1.15]">
+                            Turning Paid Meta Traffic Into 
+                            <span class="text-gold-600 block underline decoration-gold-500/40 decoration-4 underline-offset-8">
+                                Predictable Business Revenue.
+                            </span>
+                        </h1>
+
+                        <!-- Lead Paragraph -->
+                        <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+                            I am <strong class="text-navy-900 font-bold">Festus Elufowohan Oluwadamilare</strong>. I help e-commerce brands, high-ticket service providers, and scaling companies attract qualified customers through data-backed Meta Ads, technical account diagnostics, and direct WhatsApp sales funnels.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#case-studies" class="px-7 py-3.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-sm font-bold text-white shadow-lg transition flex items-center gap-2 border-b-2 border-gold-500">
+                                <span>Explore Case Studies</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 text-gold-400"></i>
+                            </a>
+                            <a href="https://wa.me/?text=Hi%20Festus,%20I%20would%20like%20to%20discuss%20a%20campaign" target="_blank" class="px-6 py-3.5 rounded-xl bg-gold-500 hover:bg-gold-600 text-navy-950 font-extrabold text-sm shadow-md transition flex items-center gap-2">
+                                <i data-lucide="message-square" class="w-4 h-4"></i>
+                                <span>Direct Chat</span>
+                            </a>
+                            <a href="#cv-printable" onclick="scrollToCV()" class="px-5 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-navy-900 border border-slate-300 text-sm font-bold transition flex items-center gap-2">
+                                <i data-lucide="file-text" class="w-4 h-4 text-navy-900"></i>
+                                <span>View CV</span>
+                            </a>
+                        </div>
+
+                        <!-- Credentials Bar -->
+                        <div class="pt-6 border-t border-slate-200 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs font-semibold text-slate-600">
+                            <span class="flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-gold-600"></i> Lagos, Nigeria
+                            </span>
+                            <span class="flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-navy-900"></i> B.Sc. Mass Comm (Miva Open Univ.)
+                            </span>
+                            <span class="flex items-center gap-2">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> Verified Meta Ads Manager Data
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Hero Right Column: Clean Professional Portrait & Key Highlights -->
+                    <div class="lg:col-span-5">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            
+                            <!-- Main Portrait Box -->
+                            <div class="bg-white p-3 rounded-3xl border-2 border-slate-200 exec-shadow relative">
+                                <div class="relative rounded-2xl overflow-hidden bg-slate-100 aspect-[3/4]">
+                                    <img src="Festus%202.png" 
+                                         onerror="this.onerror=null; this.src='https://placehold.co/600x800/141e38/facc15?text=Festus+Elufowohan\nMedia+Buyer';" 
+                                         alt="Festus Elufowohan Oluwadamilare" 
+                                         class="w-full h-full object-cover object-top filter grayscale contrast-125" />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent"></div>
+                                    
+                                    <!-- Portrait Overlay Tag -->
+                                    <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-navy-900/90 backdrop-blur-md border border-slate-700 text-white space-y-1">
+                                        <div class="flex items-center justify-between">
+                                            <span class="font-display font-bold text-sm text-white">Festus Elufowohan</span>
+                                            <span class="px-2 py-0.5 rounded bg-gold-500 text-navy-950 text-[10px] font-extrabold uppercase">
+                                                Active Media Buyer
+                                            </span>
+                                        </div>
+                                        <p class="text-[11px] text-slate-300">Meta Ads Specialist & Technical Diagnostics Expert</p>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Accent Badge -->
+                                <div class="absolute -top-4 -right-4 bg-gold-500 text-navy-950 p-3.5 rounded-2xl shadow-xl font-display font-extrabold text-xs flex items-center gap-2.5 border-2 border-white">
+                                    <i data-lucide="trending-up" class="w-5 h-5 text-navy-900"></i>
+                                    <div>
+                                        <span class="block text-sm font-extrabold leading-none">2.97% CTR</span>
+                                        <span class="text-[10px] text-navy-900 font-bold">2.5x Nigeria Average</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="no-print py-12 bg-navy-900 text-white border-y border-navy-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <span class="text-xs font-extrabold text-gold-400 uppercase tracking-widest block">
+                        VERIFIED META ADS MANAGER DASHBOARD HIGHLIGHTS
+                    </span>
+                    <p class="text-slate-300 text-xs mt-1">Direct performance metrics from active client campaigns</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="p-5 rounded-2xl bg-navy-800/80 border border-navy-700 text-center">
+                        <span class="text-xs font-semibold text-slate-300 block mb-1">Top Click-Through Rate</span>
+                        <span class="text-3xl font-extrabold text-gold-400 font-display">2.97%</span>
+                        <span class="text-[11px] text-emerald-400 font-medium block mt-1">2.5x Nigeria Average</span>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-navy-800/80 border border-navy-700 text-center">
+                        <span class="text-xs font-semibold text-slate-300 block mb-1">Lowest Awareness CPM</span>
+                        <span class="text-3xl font-extrabold text-white font-display">₦85</span>
+                        <span class="text-[11px] text-slate-400 font-medium block mt-1">Top-of-Funnel Reach</span>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-navy-800/80 border border-navy-700 text-center">
+                        <span class="text-xs font-semibold text-slate-300 block mb-1">Cost / Qualified DM Lead</span>
+                        <span class="text-3xl font-extrabold text-gold-400 font-display">₦755</span>
+                        <span class="text-[11px] text-slate-300 font-medium block mt-1">Direct Sales Funnel</span>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-navy-800/80 border border-navy-700 text-center">
+                        <span class="text-xs font-semibold text-slate-300 block mb-1">Targeted Reach</span>
+                        <span class="text-3xl font-extrabold text-white font-display">20,000+</span>
+                        <span class="text-[11px] text-slate-400 font-medium block mt-1">Unique Buyers Reached</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="no-print py-8 bg-slate-100 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-[11px] font-bold text-slate-500 uppercase tracking-widest mb-6">
+                    Brands & Clients Supported Across West Africa
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-sm">
+                        <strong class="font-display font-bold text-sm text-navy-900 block">Quellagems</strong>
+                        <span class="text-[10px] text-gold-700 font-semibold">Luxury Bags & Jewelry</span>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-sm">
+                        <strong class="font-display font-bold text-sm text-navy-900 block">Agie MUA</strong>
+                        <span class="text-[10px] text-navy-900 font-semibold">Beauty & Bridal Services</span>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-sm">
+                        <strong class="font-display font-bold text-sm text-navy-900 block">Intentionally Her</strong>
+                        <span class="text-[10px] text-purple-700 font-semibold">Women's Lifestyle</span>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-sm">
+                        <strong class="font-display font-bold text-sm text-navy-900 block">GDIT Enterprise</strong>
+                        <span class="text-[10px] text-emerald-700 font-semibold">Digital Solutions</span>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-sm col-span-2 sm:col-span-1">
+                        <strong class="font-display font-bold text-sm text-navy-900 block">Zea Talks Global</strong>
+                        <span class="text-[10px] text-blue-700 font-semibold">Media & Publishing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="no-print py-16 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-gold-500/10 border border-gold-500/30 text-gold-700 text-xs font-bold uppercase">
+                            <i data-lucide="user" class="w-3.5 h-3.5"></i> Executive Profile
+                        </div>
+
+                        <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-900 tracking-tight">
+                            Strategic Media Buying Rooted in Audience Psychology.
+                        </h2>
+
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            I am a performance-driven media buyer and digital strategist based in Lagos, Nigeria. My focus is simple: <strong class="text-navy-900">eliminate wasted ad spend, resolve account delivery blocks, and convert cold traffic into paying customers.</strong>
+                        </p>
+
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Currently pursuing a <strong class="text-navy-900">B.Sc. in Mass Communication & Media Studies at Miva Open University (2026–Present)</strong>, I combine media theory, human persuasion, visual storytelling, and technical campaign mechanics to deliver sustainable business growth.
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                                <h3 class="font-bold text-navy-900 text-sm mb-1">Academic Foundation</h3>
+                                <p class="text-xs text-slate-600">B.Sc. Mass Communication & Media Studies</p>
+                                <p class="text-[11px] text-gold-700 font-bold mt-1">Miva Open University (2026 – Present)</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                                <h3 class="font-bold text-navy-900 text-sm mb-1">Core Capability</h3>
+                                <p class="text-xs text-slate-600">Meta Ads, Account Recovery, WhatsApp Sales Funnels</p>
+                                <p class="text-[11px] text-navy-900 font-bold mt-1">Direct-Response Specialist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7-Stage Process Framework -->
+                    <div class="lg:col-span-6">
+                        <div class="bg-navy-900 text-white p-6 sm:p-8 rounded-3xl exec-shadow border-2 border-navy-800 space-y-6">
+                            <div class="flex items-center justify-between border-b border-navy-800 pb-4">
+                                <h3 class="font-display font-bold text-xl text-white flex items-center gap-2">
+                                    <i data-lucide="git-commit" class="w-5 h-5 text-gold-400"></i>
+                                    My 7-Stage Campaign Framework
+                                </h3>
+                                <span class="px-2.5 py-1 rounded bg-gold-500 text-navy-950 font-extrabold text-[10px] uppercase">
+                                    Proven Process
+                                </span>
+                            </div>
+
+                            <div class="space-y-3.5 text-xs">
+                                <div class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-md bg-gold-500 text-navy-950 font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+                                    <div>
+                                        <strong class="text-white block text-sm">Research & Diagnostics</strong>
+                                        <p class="text-slate-300">Audience profiling, competitor analysis, and verifying pixel & account health.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-md bg-gold-500 text-navy-950 font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+                                    <div>
+                                        <strong class="text-white block text-sm">Funnel Strategy & Lead Routing</strong>
+                                        <p class="text-slate-300">Setting up direct DM, WhatsApp, or landing page routes to eliminate friction.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-md bg-gold-500 text-navy-950 font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+                                    <div>
+                                        <strong class="text-white block text-sm">Creative & Copy Strategy</strong>
+                                        <p class="text-slate-300">Developing visual stop-scroll hooks, direct-response copy, and AI UGC video scripts.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-md bg-gold-500 text-navy-950 font-bold flex items-center justify-center shrink-0 mt-0.5">4</span>
+                                    <div>
+                                        <strong class="text-white block text-sm">Structured Campaign Launch</strong>
+                                        <p class="text-slate-300">Consolidated CBO/ABO campaign architecture with tight objective split-testing.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-md bg-gold-500 text-navy-950 font-bold flex items-center justify-center shrink-0 mt-0.5">5</span>
+                                    <div>
+                                        <strong class="text-white block text-sm">Data Analysis & Monitoring</strong>
+                                        <p class="text-slate-300">Tracking CTR, CPM, CPA, and lead-to-conversation conversion rates in real time.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-md bg-gold-500 text-navy-950 font-bold flex items-center justify-center shrink-0 mt-0.5">6</span>
+                                    <div>
+                                        <strong class="text-white block text-sm">Optimization & Iteration</strong>
+                                        <p class="text-slate-300">Cutting underperforming ads, refreshing creative fatigue, and refining targeting.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-md bg-gold-500 text-navy-950 font-bold flex items-center justify-center shrink-0 mt-0.5">7</span>
+                                    <div>
+                                        <strong class="text-white block text-sm">Scale & Growth</strong>
+                                        <p class="text-slate-300">Scaling winning ad sets and expanding geographic reach across Nigeria & West Africa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="no-print py-16 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-navy-900 text-white text-xs font-bold uppercase">
+                        <i data-lucide="layers" class="w-3.5 h-3.5 text-gold-400"></i> Core Services
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-900">
+                        Specialized Performance Marketing Solutions
+                    </h2>
+                    <p class="text-slate-600 text-sm">
+                        Tailored for E-Commerce, Service Businesses, and Growth Brands.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Service Card 1 -->
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 exec-shadow hover:border-gold-500 transition space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center font-bold">
+                            <i data-lucide="target" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-navy-900">Meta Ads Management</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Full-funnel campaign setup across Facebook & Instagram. Custom audience targeting, pixel integration, CBO budget optimization, and conversion tracking.
+                        </p>
+                        <ul class="text-[11px] text-slate-700 space-y-1.5 pt-3 border-t border-slate-100 font-medium">
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-gold-600"></i> Objective Split-Testing</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-gold-600"></i> WhatsApp Lead Routing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 exec-shadow hover:border-gold-500 transition space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500 text-navy-950 flex items-center justify-center font-bold">
+                            <i data-lucide="wrench" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-navy-900">Technical Diagnostics</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Resolving ad delivery blockages, identity authentication locks, Meta Business Suite structural errors, and restricted ad accounts.
+                        </p>
+                        <ul class="text-[11px] text-slate-700 space-y-1.5 pt-3 border-t border-slate-100 font-medium">
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-navy-900"></i> Business Verification</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-navy-900"></i> Delivery Unblocking</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 exec-shadow hover:border-gold-500 transition space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center font-bold">
+                            <i data-lucide="video" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-navy-900">Creative & AI UGC Strategy</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Crafting high-converting visual hooks, direct-response ad copy, short-form video concepts, and AI-assisted UGC video strategies.
+                        </p>
+                        <ul class="text-[11px] text-slate-700 space-y-1.5 pt-3 border-t border-slate-100 font-medium">
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-gold-600"></i> Visual Hook Design</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-gold-600"></i> Direct-Response Angles</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200 exec-shadow hover:border-gold-500 transition space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-slate-100 text-navy-900 border border-slate-300 flex items-center justify-center font-bold">
+                            <i data-lucide="pie-chart" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-navy-900">Cross-Platform Media</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Campaign setup and audience research across TikTok Ads with foundational support for Google Search & Display campaigns.
+                        </p>
+                        <ul class="text-[11px] text-slate-700 space-y-1.5 pt-3 border-t border-slate-100 font-medium">
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-navy-900"></i> TikTok Campaign Setup</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-navy-900"></i> Google Ads Basics</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="no-print py-16 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-gold-500/10 text-gold-700 border border-gold-500/30 text-xs font-bold uppercase">
+                        <i data-lucide="code" class="w-3.5 h-3.5"></i> Professional Stack
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-900">
+                        Technical Skills & Marketing Stack
+                    </h2>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    
+                    <div class="space-y-6">
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+                            <h3 class="font-display font-bold text-base text-navy-900 flex items-center gap-2">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-gold-600"></i> Paid Media & Performance
+                            </h3>
+                            <div class="flex flex-wrap gap-2 text-xs font-medium">
+                                <span class="px-3 py-1.5 rounded-lg bg-navy-900 text-white">Meta Ads Manager</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-navy-900 text-white">Facebook & Instagram Ads</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-800">TikTok Ads Setup</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-800">Pixel & Conversions API</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-800">A/B Split Testing</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-gold-500 text-navy-950 font-bold">WhatsApp Sales Funnels</span>
+                            </div>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+                            <h3 class="font-display font-bold text-base text-navy-900 flex items-center gap-2">
+                                <i data-lucide="palette" class="w-4 h-4 text-navy-900"></i> Creative & Graphic Design
+                            </h3>
+                            <div class="flex flex-wrap gap-2 text-xs font-medium">
+                                <span class="px-3 py-1.5 rounded-lg bg-gold-500 text-navy-950 font-bold">Canva Design</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-800">CorelDRAW</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-800">Direct Response Copywriting</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-800">AI UGC Video Scripts</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-800">Visual Hook Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+                            <h3 class="font-display font-bold text-base text-navy-900 flex items-center gap-2">
+                                <i data-lucide="bar-chart-3" class="w-4 h-4 text-gold-600"></i> Analytics & Strategy
+                            </h3>
+                            <div class="flex flex-wrap gap-2 text-xs font-medium">
+                                <span class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-800">Campaign Reporting</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-800">Audience Research</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-800">CPM / CTR / CPA Diagnostics</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-800">Spreadsheet Analysis</span>
+                            </div>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-navy-900 text-white rounded-2xl p-6 space-y-4">
+                            <h3 class="font-display font-bold text-base text-white flex items-center gap-2">
+                                <i data-lucide="cpu" class="w-4 h-4 text-gold-400"></i> Software Tools Stack
+                            </h3>
+                            <div class="grid grid-cols-2 gap-3 text-xs">
+                                <div class="p-3 bg-navy-800 rounded-xl border border-navy-700">
+                                    <strong class="text-gold-400 block font-bold">Meta Business Suite</strong>
+                                    <span class="text-[10px] text-slate-300">Ads Manager & Assets</span>
+                                </div>
+                                <div class="p-3 bg-navy-800 rounded-xl border border-navy-700">
+                                    <strong class="text-white block font-bold">Canva / CorelDRAW</strong>
+                                    <span class="text-[10px] text-slate-300">Graphics & Visual Hooks</span>
+                                </div>
+                                <div class="p-3 bg-navy-800 rounded-xl border border-navy-700">
+                                    <strong class="text-white block font-bold">AI Video Tools</strong>
+                                    <span class="text-[10px] text-slate-300">Scripts & UGC Workflows</span>
+                                </div>
+                                <div class="p-3 bg-navy-800 rounded-xl border border-navy-700">
+                                    <strong class="text-white block font-bold">CapCut / Editors</strong>
+                                    <span class="text-[10px] text-slate-300">Short-Form Video Edits</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="case-studies" class="no-print py-16 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-navy-900 text-white text-xs font-bold uppercase">
+                        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-400"></i> Verified Proof of Work
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-900">
+                        Client Performance & Case Studies
+                    </h2>
+                </div>
+
+                <div class="space-y-8">
+                    
+                    <!-- Case Study 1 -->
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200 exec-shadow space-y-6">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-200 pb-6">
+                            <div>
+                                <span class="px-3 py-1 rounded bg-navy-900 text-gold-400 text-xs font-bold uppercase tracking-wider">
+                                    Case Study 01
+                                </span>
+                                <h3 class="text-2xl font-display font-bold text-navy-900 mt-2">
+                                    Quellagems — Premium Jewellery & Luxury Bags E-Commerce
+                                </h3>
+                                <p class="text-xs text-slate-500 mt-1 font-medium">
+                                    Location: Lagos, Nigeria & Ghana • Timeline: May 2026 – July 2026
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="px-3 py-1.5 rounded-xl bg-gold-500 text-navy-950 font-extrabold text-xs">
+                                    2.97% Top CTR
+                                </span>
+                                <span class="px-3 py-1.5 rounded-xl bg-navy-900 text-white font-bold text-xs">
+                                    ₦755 / DM Lead
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="grid lg:grid-cols-12 gap-8">
+                            <div class="lg:col-span-6 space-y-4 text-xs text-slate-600 leading-relaxed">
+                                <h4 class="font-bold text-navy-900 text-sm">Challenge & Technical Diagnostic:</h4>
+                                <p>
+                                    Quellagems suffered from complete ad delivery blockages caused by Meta account authentication locks and structural restrictions. Ad delivery was entirely stopped.
+                                </p>
+
+                                <h4 class="font-bold text-navy-900 text-sm">Strategic Execution:</h4>
+                                <ul class="list-disc list-inside space-y-1.5 text-slate-600">
+                                    <li>Resolved identity authentication locks and restored active ad delivery.</li>
+                                    <li>Built a 2-stage campaign funnel targeting gift buyers across Nigeria and Ghana.</li>
+                                    <li>Deployed audience segmentation to drive high-intent buyer conversations.</li>
+                                </ul>
+                            </div>
+
+                            <div class="lg:col-span-6 grid sm:grid-cols-2 gap-4">
+                                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
+                                    <span class="text-xs font-bold text-slate-500 block">Engagement Phase (May 2026)</span>
+                                    <div class="text-2xl font-extrabold text-navy-900 font-display">4,578 Reach</div>
+                                    <p class="text-[11px] text-slate-600">27+ qualified direct sales conversations generated during initial recovery.</p>
+                                </div>
+
+                                <div class="p-4 rounded-2xl bg-navy-900 text-white border border-navy-800 space-y-1">
+                                    <span class="text-xs font-bold text-gold-400 block">Sales Phase (June–July 2026)</span>
+                                    <div class="text-2xl font-extrabold text-white font-display">2.97% CTR</div>
+                                    <p class="text-[11px] text-slate-300">
+                                        50% CPM reduction (₦4,809 down to ₦2,418) generating buyer chats at <strong>₦755 per lead</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200 exec-shadow space-y-6">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-200 pb-6">
+                            <div>
+                                <span class="px-3 py-1 rounded bg-gold-500 text-navy-950 text-xs font-extrabold uppercase tracking-wider">
+                                    Case Study 02
+                                </span>
+                                <h3 class="text-2xl font-display font-bold text-navy-900 mt-2">
+                                    Agie MUA — Professional Bridal & Beauty Services
+                                </h3>
+                                <p class="text-xs text-slate-500 mt-1 font-medium">
+                                    Location: Lagos, Nigeria • Timeline: 2025 – 2026
+                                </p>
+                            </div>
+                            <span class="px-3 py-1.5 rounded-xl bg-navy-900 text-white font-bold text-xs">
+                                Objective Split-Test
+                            </span>
+                        </div>
+
+                        <div class="grid lg:grid-cols-12 gap-8">
+                            <div class="lg:col-span-6 space-y-3 text-xs text-slate-600 leading-relaxed">
+                                <h4 class="font-bold text-navy-900 text-sm">Objective Split-Testing Strategy:</h4>
+                                <p>
+                                    High-ticket beauty service bookings in Lagos suffered from high acquisition costs under standard Engagement setups. Executed a direct objective split-test comparing Sales Direct DMs versus generic Engagement.
+                                </p>
+                            </div>
+
+                            <div class="lg:col-span-6 grid grid-cols-3 gap-3 text-center">
+                                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                                    <span class="text-[11px] text-slate-500 block font-semibold">Sales CPM</span>
+                                    <span class="text-xl font-bold text-navy-900 font-display mt-1 block">₦1,194</span>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                                    <span class="text-[11px] text-slate-500 block font-semibold">Engagement CPM</span>
+                                    <span class="text-xl font-bold text-slate-400 font-display mt-1 block">₦2,240</span>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-gold-500 text-navy-950">
+                                    <span class="text-[11px] font-extrabold block">Cost Efficiency</span>
+                                    <span class="text-xl font-extrabold font-display mt-1 block">46% Lower</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3 -->
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200 exec-shadow space-y-6">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-200 pb-6">
+                            <div>
+                                <span class="px-3 py-1 rounded bg-slate-200 text-navy-900 text-xs font-bold uppercase tracking-wider">
+                                    Case Study 03
+                                </span>
+                                <h3 class="text-2xl font-display font-bold text-navy-900 mt-2">
+                                    Intentionally Her — Women's Lifestyle & Empowerment
+                                </h3>
+                                <p class="text-xs text-slate-500 mt-1 font-medium">
+                                    Top-of-Funnel Impression Cost Reduction
+                                </p>
+                            </div>
+                            <span class="px-3 py-1.5 rounded-xl bg-gold-500 text-navy-950 font-extrabold text-xs">
+                                56x Cost Reduction
+                            </span>
+                        </div>
+
+                        <div class="bg-navy-900 text-white p-6 rounded-2xl border border-navy-800 flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div class="space-y-1.5 text-xs">
+                                <h4 class="font-bold text-gold-400 text-sm">Top-of-Funnel Reach Awareness Strategy:</h4>
+                                <p class="text-slate-300 leading-relaxed max-w-xl">
+                                    Deployed targeted reach awareness campaigns to maximize brand impression density across targeted female demographics in Nigeria.
+                                </p>
+                            </div>
+                            <div class="text-center md:text-right shrink-0">
+                                <span class="text-3xl font-extrabold text-gold-400 font-display block">₦85 CPM</span>
+                                <span class="text-[11px] text-slate-300">56x lower impression costs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cv-printable" class="py-16 bg-white border-t border-slate-200">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="no-print mb-8 p-5 rounded-2xl bg-navy-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4 border border-navy-800">
+                    <div>
+                        <h3 class="font-bold text-gold-400 text-base">Executive Curriculum Vitae (Print View)</h3>
+                        <p class="text-xs text-slate-300">Clean single-page formatted layout suitable for employers, agencies, and PDF downloads.</p>
+                    </div>
+                    <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-600 text-navy-950 font-extrabold text-xs transition flex items-center gap-2 shrink-0">
+                        <i data-lucide="printer" class="w-4 h-4"></i> Export PDF CV
+                    </button>
+                </div>
+
+                <!-- CV Paper Document Box -->
+                <div class="cv-page-container bg-white text-slate-900 rounded-3xl p-8 sm:p-14 border-2 border-slate-300 shadow-xl">
+                    
+                    <!-- CV Header -->
+                    <div class="border-b-2 border-navy-900 pb-6 mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <h1 class="text-3xl font-extrabold font-display text-navy-900 uppercase tracking-tight">
+                                FESTUS ELUFOWOHAN OLUWADAMILARE
+                            </h1>
+                            <p class="text-base font-bold text-gold-700 mt-1">
+                                Performance Marketer | Media Buyer | Meta Ads Specialist
+                            </p>
+                            <p class="text-xs text-slate-600 mt-1 flex flex-wrap gap-4">
+                                <span>📍 Lagos, Nigeria</span>
+                                <span>✉️ festuselufowohan@gmail.com</span>
+                                <span>🎓 Miva Open University</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Verified Performance Metrics Strip -->
+                    <div class="mb-8 p-4 bg-slate-50 rounded-xl border border-slate-300">
+                        <h2 class="text-xs font-extrabold text-navy-900 uppercase tracking-wider mb-3">
+                            Verified Meta Ads Manager Key Metrics
+                        </h2>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div>
+                                <span class="block text-2xl font-bold text-gold-700 font-display">2.97%</span>
+                                <span class="text-[11px] text-slate-700 font-medium">Top Click-Through Rate</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-bold text-navy-900 font-display">₦85</span>
+                                <span class="text-[11px] text-slate-700 font-medium">Lowest Awareness CPM</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-bold text-navy-900 font-display">₦755</span>
+                                <span class="text-[11px] text-slate-700 font-medium">Lowest Direct Sales Cost/DM</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-bold text-navy-900 font-display">20,000+</span>
+                                <span class="text-[11px] text-slate-700 font-medium">Unique Targeted Reach</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Executive Summary -->
+                    <div class="mb-8">
+                        <h2 class="text-xs font-extrabold text-navy-900 uppercase tracking-wider mb-2 border-b border-slate-300 pb-1">
+                            Executive Summary
+                        </h2>
+                        <p class="text-xs text-slate-800 leading-relaxed font-normal">
+                            Results-driven Performance Marketer and Media Buyer with hands-on expertise structuring paid media campaigns, optimizing budget allocation, and resolving technical Meta ad account delivery blocks for West African businesses. Specialized in direct-response copy, visual hook design, WhatsApp sales funnels, and objective split-testing to maximize return on ad spend.
+                        </p>
+                    </div>
+
+                    <!-- Core Competencies -->
+                    <div class="mb-8">
+                        <h2 class="text-xs font-extrabold text-navy-900 uppercase tracking-wider mb-3 border-b border-slate-300 pb-1">
+                            Core Capabilities & Expertise
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-slate-800">
+                            <div>• <strong>Paid Media Architecture:</strong> Full-funnel Meta Ads (Facebook & Instagram).</div>
+                            <div>• <strong>Technical Diagnostics:</strong> Account recovery & identity authentication locks.</div>
+                            <div>• <strong>Conversion Funnels:</strong> Direct WhatsApp & Instagram DM lead generation.</div>
+                            <div>• <strong>Creative Strategy:</strong> Visual stop-scroll hooks, copy & AI UGC workflows.</div>
+                            <div>• <strong>Analytics & Optimization:</strong> CPM/CTR/CPA tracking & CBO/ABO split-testing.</div>
+                            <div>• <strong>Cross-Platform Support:</strong> TikTok Ads & Google Search/Display basics.</div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="mb-8">
+                        <h2 class="text-xs font-extrabold text-navy-900 uppercase tracking-wider mb-2 border-b border-slate-300 pb-1">
+                            Education
+                        </h2>
+                        <div class="flex justify-between items-baseline text-xs">
+                            <div>
+                                <strong class="text-navy-900 block text-sm">B.Sc. Mass Communication & Media Studies</strong>
+                                <span class="text-slate-600">Miva Open University</span>
+                            </div>
+                            <span class="text-slate-600 font-bold">2026 – Present</span>
+                        </div>
+                    </div>
+
+                    <!-- Selected Case Studies / Proof of Work -->
+                    <div class="space-y-6 mb-8">
+                        <h2 class="text-xs font-extrabold text-navy-900 uppercase tracking-wider border-b border-slate-300 pb-1">
+                            Proof of Work & Campaign Case Studies
+                        </h2>
+
+                        <!-- Case 1 -->
+                        <div class="text-xs space-y-1">
+                            <div class="flex justify-between font-bold text-navy-900">
+                                <span>Quellagems — Premium Jewellery & Luxury Bags E-Com</span>
+                                <span class="text-slate-600">May 2026 – July 2026</span>
+                            </div>
+                            <p class="text-slate-700">
+                                Diagnosed & resolved delivery blockages caused by account authentication locks. Restored delivery and deployed a gift-buyer funnel achieving a <strong>2.97% CTR</strong> (2.5x national average), 50% CPM reduction, and <strong>₦755 Cost per Conversation</strong>.
+                            </p>
+                        </div>
+
+                        <!-- Case 2 -->
+                        <div class="text-xs space-y-1">
+                            <div class="flex justify-between font-bold text-navy-900">
+                                <span>Agie MUA — Professional Beauty & Bridal Services</span>
+                                <span class="text-slate-600">2025 – 2026</span>
+                            </div>
+                            <p class="text-slate-700">
+                                Executed objective split-test for high-ticket bookings in Lagos. Achieved <strong>₦1,194 CPM</strong> on Sales campaigns compared to ₦2,240 on generic Engagement campaigns, lowering acquisition friction.
+                            </p>
+                        </div>
+
+                        <!-- Case 3 -->
+                        <div class="text-xs space-y-1">
+                            <div class="flex justify-between font-bold text-navy-900">
+                                <span>Intentionally Her — Women's Lifestyle Brand</span>
+                                <span class="text-slate-600">2025</span>
+                            </div>
+                            <p class="text-slate-700">
+                                Top-of-funnel reach strategy achieving an <strong>₦85 CPM</strong>, reducing impression costs by 56x compared to default engagement metrics.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Experience & Business Support -->
+                    <div class="mb-8 text-xs">
+                        <h2 class="text-xs font-extrabold text-navy-900 uppercase tracking-wider mb-2 border-b border-slate-300 pb-1">
+                            Other Brands & Businesses Supported
+                        </h2>
+                        <p class="text-slate-800">
+                            GDIT Enterprise • Zea Talks Global • Enechambs Food • Digital Marketing, Media Buying, Visual Storytelling & Sales Support.
+                        </p>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-300 text-center text-[10px] text-slate-600 font-semibold">
+                        Festus Elufowohan Oluwadamilare • festuselufowohan@gmail.com • Lagos, Nigeria
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="no-print py-20 bg-navy-900 text-white relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+                
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-gold-500 text-navy-950 text-xs font-extrabold uppercase">
+                    <i data-lucide="mail" class="w-3.5 h-3.5"></i> Let's Connect
+                </div>
+
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
+                    Ready to Scale Your Meta Ads & Fix Delivery Blocks?
+                </h2>
+
+                <p class="text-slate-300 text-base max-w-2xl mx-auto font-normal">
+                    Whether you need full media buying management, ad account diagnostic recovery, or high-converting WhatsApp lead funnels, let's talk.
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+                    <a href="https://wa.me/?text=Hi%20Festus,%20I%20reviewed%20your%20Portfolio%20and%20would%20like%20to%20discuss%20a%20project" target="_blank" class="px-8 py-4 rounded-xl bg-gold-500 hover:bg-gold-600 text-navy-950 font-extrabold text-sm shadow-xl transition flex items-center gap-2">
+                        <i data-lucide="message-square" class="w-5 h-5"></i> Chat on WhatsApp
+                    </a>
+                    <a href="mailto:festuselufowohan@gmail.com" class="px-8 py-4 rounded-xl bg-navy-800 hover:bg-navy-700 border border-navy-700 text-white font-bold text-sm transition flex items-center gap-2">
+                        <i data-lucide="mail" class="w-5 h-5 text-gold-400"></i> Send Email
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="no-print bg-navy-950 border-t border-navy-900 py-8 text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <img src="1000162547.jpg.jpeg" 
+                     onerror="this.onerror=null; this.outerHTML='<div class=\'w-7 h-7 rounded-lg bg-navy-900 border border-gold-500/40 flex items-center justify-center text-gold-400 font-bold text-xs\'>FE</div>';" 
+                     alt="Logo" 
+                     class="w-7 h-7 rounded-lg" />
+                <div>
+                    <p class="font-bold text-white">Festus Elufowohan Oluwadamilare</p>
+                    <p class="text-[11px] text-slate-400">Performance Marketer & Media Buyer • Lagos, Nigeria</p>
+                </div>
+            </div>
+            <p>© 2026 Festus Elufowohan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function scrollToCV() {
+            const cvSection = document.getElementById('cv-printable');
+            if (cvSection) {
+                cvSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function toggleCVView() {
+            scrollToCV();
+            setTimeout(() => {
+                window.print();
+            }, 500);
+        }
+    </script>
+</body>
+</html>
